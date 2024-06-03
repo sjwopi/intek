@@ -15,7 +15,7 @@
       <img class="profile-sidebar__logo open" src="./img/logoOpen.png" alt="лого">
 
       <nav class="profile-sidebar__nav">
-        <a href="./index.html" class="profile-sidebar__link active">
+        <a href="./index.html" class="profile-sidebar__link">
           <img src="./img/link-home.svg" alt="иконка главное">
           <span>Главная</span>
         </a>
@@ -27,7 +27,7 @@
           <img src="./img/link-time.svg" alt="иконка заказов">
           <span>Заказы</span>
         </a>
-        <a href="./doc.html" class="profile-sidebar__link">
+        <a href="./doc.html" class="profile-sidebar__link active">
           <img src="./img/link-doc.svg" alt="иконка документов">
           <span>Документы</span>
         </a>
@@ -54,55 +54,8 @@
         <h3 class="profile-header__money">Фамилия И. О.</h3>
       </header>
 
-      <section class="profile-content lk">
-        <h1 class="profile-content__title">Личный кабинет</h1>
-        <div class="lk__block">
-          <h3 class="lk__subtitle">ФИО:</h3>
-          <p class="lk__right">Фамилия Имя Отчество</p>
-        </div>
-        <div class="lk__block">
-          <h3 class="lk__subtitle">Email:</h3>
-          <p class="lk__right">test@mail.ru</p>
-        </div>
-        <div class="lk__block">
-          <h3 class="lk__subtitle">Мобильный телефон:</h3>
-          <p class="lk__right">+7 (999) 999 - 99 - 99</p>
-        </div>
-        <div class="lk__block">
-          <h3 class="lk__subtitle">Логин:</h3>
-          <p class="lk__right">admin</p>
-        </div>
-        <div class="lk__block">
-          <h3 class="lk__subtitle">Пароль:</h3>
-          <div class="lk__right password">
-            <p>********</p>
-            <button class="lk__btn" id="changePassword">Сменить пароль</button>
-          </div>
-        </div>
-        <div class="lk__block company">
-          <h3 class="lk__subtitle">Компания:</h3>
-          <p class="lk__right">
-            <h3 class="lk__subtitle sub">ООО «Тест компании»</h3>
-          </p>
-        </div>
-      </section>
+      <section class="profile-content"></section>
     </main>
-  </div>
-
-  <div class="password-modal" id="password-modal">
-    <div class="password-modal__overlay" id="password-modal__overlay"></div>
-    <form class="password-modal__form">
-
-      <fieldset class="authpage__field">
-        <input type="password" class="authpage__input" placeholder="Старый пароль">
-        <input type="password" class="authpage__input" placeholder="Новый пароль">
-        <input type="password" class="authpage__input" placeholder="Повторите новый пароль">
-      </fieldset>
-
-      <button class="password-modal__save">Сменить</button>
-
-      <button class="password-modal__close" id="password-modal__close"></button>
-    </form>
   </div>
 
   <script src="./index.js"></script>

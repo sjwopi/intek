@@ -14,7 +14,7 @@ body {
 
 
 .authpage {
-  background-color: #122538;
+  background-color: #001a33;
   padding: 60px calc((100% - 1400px) / 2);
 }
 
@@ -110,12 +110,14 @@ body {
 }
 
 .profile {
-  background-color: #122538;
+  background-color: #001a33;
   display: flex;
   flex-direction: row;
   width: 100%;
 
   --desktop-width: 1280px;
+  --header-height: 50px;
+  --sidebar-width: 120px;
 }
 
 .profile-container {
@@ -125,13 +127,13 @@ body {
 
 .profile-header {
   background-color: white;
-  height: 50px;
+  height: var(--header-height);
   max-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
-  padding-right: calc((100% - var(--desktop-width)) / 2);
+  padding-right: calc((100vw - var(--desktop-width)) / 2);
   gap: 70px;
 }
 .profile-header__money {
@@ -141,16 +143,20 @@ body {
 
 .profile-sidebar {
   background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
   height: 100vh;
   padding: 45px 20px;
-  min-width: 120px;
-  max-width: 120px;
-  transition: all .1s ease-out;
+  min-width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
+  transition: all .5s ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  overflow: hidden;
 }
 
 .profile-sidebar__nav {
@@ -167,7 +173,7 @@ body {
   justify-content: start;
   gap: 20px;
   text-decoration: none;
-  word-wrap: none;
+  white-space: nowrap;
 }
 .profile-sidebar__link img{
   width: 35px;
@@ -178,7 +184,7 @@ body {
   color: white;
   display: none;
   transform: scale(0.1);
-  word-wrap: none;
+  white-space: nowrap;
 }
 .profile-sidebar__link.active span {
   color: #008bd6;
@@ -219,8 +225,148 @@ body {
 
 
 .profile-content {
-  background-color: #122538;
-  height: 50px;
-  width: 100%;
+  background-color: #001a33;
+  height: calc(100vh - var(--header-height));
+  width:  calc(100vw - var(--sidebar-width));
   padding: 0;
+  margin-left: var(--sidebar-width);
+  padding: 100px calc((100% - var(--desktop-width)) / 2);
+  overflow-y: scroll;
+  position: relative;
 }
+.profile-content::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 100%;
+  background: url(/img/profileBG.jpg) 100px/450px repeat;
+}
+.profile-content::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 100%;
+  background: url(/img/profileBG.jpg) 100px/450px repeat;
+}
+
+.profile-content__title {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.lk {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.lk__block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 1px solid #008BD6;
+}
+.lk__block:last-child {
+  border-bottom: 1px solid #008BD6;
+}
+.lk__subtitle {
+  color: white;
+  flex: 1;
+  font-size: 24px;
+  font-weight: 400;
+}
+.lk__subtitle.sub {
+  color: #008BD6;
+}
+.lk__btn {
+  width: fit-content;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.lk__right {
+  color: white;
+  flex: 1;
+  font-size: 16px;
+}
+.lk__right.password {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lk__right.company {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.password-modal {
+  display: none;
+}
+.password-modal.open {
+  display: block;
+}
+.password-modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #0006;
+  cursor: pointer;
+}
+
+.password-modal__form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: fit-content;
+  z-index: 6;
+  background-color: #001a33;
+  border: 2px solid #008BD6;
+  padding: 50px 30px 30px 30px;
+  border-radius: 30px;
+  transform: translate(-50%, -50%);
+}
+.password-modal__close {
+  cursor: pointer;
+  border: none;
+  background: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: url(/img/close-icon.png) center/contain no-repeat;
+  filter: brightness(0) invert(0.35) sepia(1) saturate(8) hue-rotate(174deg);
+}
+
+.password-modal__form .authpage__field {
+  width: 100%;
+  gap: 0;
+  margin-bottom: 30px;
+}
+
+.password-modal__save {
+  display: block;
+  border: none;
+  background-color: #008BD6;
+  color: white;
+  padding: 10px 30px;
+  font-size: 18px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
