@@ -86,10 +86,27 @@ body {
   border-bottom: 1px solid white;
   width: 100%;
   color: white;
-  padding: 10px 0;
+  padding: 16px 0;
 }
+.authpage__input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  accent-color: #008bd6d2;
+}
+
 .authpage__input::placeholder {
   color: white;
+}
+.authpage__soglasie {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.authpage__soglasie a{
+  color: white;
+  text-decoration: none;
+  opacity: .7;
 }
 
 .profile {
@@ -150,13 +167,14 @@ body {
   justify-content: start;
   gap: 20px;
   text-decoration: none;
+  word-wrap: none;
 }
 .profile-sidebar__link img{
   width: 35px;
   height: 35px;
   object-fit: contain;
 }
-.profile-sidebar__link span{
+.profile-sidebar__link span {
   color: white;
   display: none;
   transform: scale(0.1);

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./index.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="authpage">
+    <div class="authpage__container">
+      <h1 class="authpage__title">Регистрация</h1>
+
+      <form class="authpage__form">
+        <fieldset class="authpage__field">
+          <input class="authpage__input" name="phone" placeholder="Телефон">
+          <input class="authpage__input" name="email" placeholder="E-mail">
+          <input class="authpage__input" name="nameCompany" placeholder="Название компании">
+          <input class="authpage__input" name="kod" placeholder="Код из СМС">
+          <div class="authpage__soglasie">
+            <div class="authpage__checkbox">
+              <label for="coglasie"></label>
+              <input type="checkbox" name="coglasie">
+            </div>
+            <a href="">Даю согласие на обработку персональных данных в согласно Политике конфиденциальности и Пользовательскому соглашению, размещенным на платформе</a>
+          </div>
+        </fieldset>
+
+        <div class="authpage__btns">
+          <button class="authpage__btn">Отправить код</button>
+          <a href="./login.html" class="authpage__btn outline">Войти</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
