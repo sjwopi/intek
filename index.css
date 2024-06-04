@@ -277,7 +277,7 @@ body {
   padding: 45px 20px;
   min-width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  transition: all .5s ease-out;
+  transition: all .2s ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -725,8 +725,46 @@ body {
 .feedback__btn:hover {
   background-color: #64BC52;
 }
-
-
+.doc {
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.doc__block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid #008bd6;
+}
+.doc__left {
+  flex: 2;
+}
+.doc__center, .doc__right {
+  flex: 1;
+}
+.doc__caption {
+  display: block;
+  color: white;
+  margin: 30px 0 0 auto;
+}
+a.doc__right {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-left: 30px;
+}
+a.doc__right::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: url(/img/icon-file.png) center/contain no-repeat;
+}
 
 @media screen and (max-height: 730px) {
   .profile-sidebar__logo {
@@ -772,6 +810,7 @@ body {
     width: 100%;
     margin: 0;
     height: fit-content;
+    min-height: calc(100vh - 66px);
   }
   .profile-content__title {
     margin-bottom: 30px;
@@ -818,6 +857,16 @@ body {
   }
   .feedback__btn {
     margin-right: auto;
+  }
+  .doc__block {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .doc__block.main {
+    display: none;
+  }
+  .doc__right, .doc__center, .doc__left {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 720px) {
