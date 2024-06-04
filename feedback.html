@@ -142,10 +142,21 @@
             <textarea class="feedback__textarea" placeholder="Добавить комментарий..."></textarea>
           </div>
 
-          <button class="feedback__btn">Сохранить</button>
+          <button class="feedback__btn" id="feedbackSave">Сохранить</button>
         </form>
       </section>
     </main>
+  </div>
+
+  <div class="password-modal" id="feedback-modal">
+    <div class="password-modal__overlay" id="feedback-modal__overlay"></div>
+    <form class="password-modal__form">
+      <h4 class="feedback__subtitle modal">Успешно отправлено</h4>
+
+      <button class="password-modal__save">Дальше!</button>
+
+      <button class="password-modal__close" id="feedback-modal__close"></button>
+    </form>
   </div>
 
   <script src="./index.js"></script>
