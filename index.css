@@ -745,6 +745,20 @@ body {
 .doc__center, .doc__right {
   flex: 1;
 }
+input.doc__center {
+  font-size: 18px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #008bd6;
+  color: #008bd6;
+  color: white;
+  padding: 2px 0;
+  font-size: 14px;
+}
+input.doc__center::placeholder {
+  color: #008bd6;
+}
 .doc__caption {
   display: block;
   color: white;
@@ -764,6 +778,14 @@ a.doc__right::before {
   width: 20px;
   height: 20px;
   background: url(/img/icon-file.png) center/contain no-repeat;
+}
+.doc__btn {
+  background-color: #008bd6;
+  width: fit-content;
+  border: none;
+  padding: 20px 80px;
+  color: white;
+  margin-top: 30px;
 }
 
 @media screen and (max-height: 730px) {
@@ -858,12 +880,24 @@ a.doc__right::before {
   .feedback__btn {
     margin-right: auto;
   }
+  .doc {
+    width: calc(100% + 40px);
+    position: relative;
+    left: -20px;
+  }
   .doc__block {
     flex-direction: column;
     gap: 10px;
+    padding: 20px;
   }
   .doc__block.main {
     display: none;
+  }
+  .doc__btn {
+    margin-left: 20px;
+  }
+  .doc__caption {
+    margin-right: 20px;
   }
   .doc__right, .doc__center, .doc__left {
     font-size: 14px;
