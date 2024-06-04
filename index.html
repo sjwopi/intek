@@ -80,10 +80,30 @@
           </div>
         </div>
         <div class="lk__block company">
-          <h3 class="lk__subtitle">Компания:</h3>
-          <p class="lk__right">
+          <div class="lk__subtitle">
+            <h3 class="lk__subtitle">Компания:</h3>
+            <p class="lk__err">Для того, чтобы купить нефтепродукты необходимо заполнить реквизиты организации</p>
+          </div>
+          <div class="lk__right">
             <h3 class="lk__subtitle sub">ООО «Тест компании»</h3>
-          </p>
+
+          <!--   <h4 class="lk__subtitle inn">ИНН 123456789987654321</h4> -->
+
+            <div class="lk__input-inn">
+              <h4 class="lk__subtitle inn">ИНН</h4>
+              <input class="lk__input inn" placeholder="Введите ИНН">
+            </div>
+
+            <button class="lk__btn" id="changePassword">Проверить ИНН</button>
+
+            <div class="lk__input-wrapper">
+              <input name="lk__input-file" type="file" class="lk__input file">
+              <label for="lk__input-file" class="lk__input-file-button">
+                <img class="lk__input-file-icon" src="/img/icon-file.png" alt="Выбрать файл">
+                <span class="lk__input-file-button-text">Прикрепить реквизиты</span>
+              </label>
+            </div>
+          </div>
         </div>
       </section>
     </main>

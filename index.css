@@ -14,7 +14,7 @@ body {
 
 
 .authpage {
-  background-color: #001a33;
+  background-color: #122538;
   padding: 60px calc((100% - 1400px) / 2);
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .profile {
-  background-color: #001a33;
+  background-color: #122538;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -142,7 +142,7 @@ body {
 }
 
 .profile-sidebar {
-  background-color: black;
+  background-color: #141414;
   position: fixed;
   top: 0;
   left: 0;
@@ -155,14 +155,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   overflow: hidden;
 }
 
 .profile-sidebar__nav {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 40px;
 }
 .profile-sidebar__link {
@@ -193,9 +195,6 @@ body {
   filter: brightness(0) invert(0.35) sepia(1) saturate(20) hue-rotate(174deg);
 }
 .profile-sidebar__logo {
-  position: absolute;
-  top: 45px;
-  left: 20px;
   width: 77px;
   object-fit: contain;
 }
@@ -225,7 +224,7 @@ body {
 
 
 .profile-content {
-  background-color: #001a33;
+  background-color: #122538;
   height: calc(100vh - var(--header-height));
   width:  calc(100vw - var(--sidebar-width));
   padding: 0;
@@ -242,6 +241,7 @@ body {
   width: 130px;
   height: 100%;
   background: url(/img/profileBG.jpg) 100px/450px repeat;
+  filter: brightness(1.44) sepia(0.25) hue-rotate(3deg) saturate(.75);
 }
 .profile-content::before {
   position: absolute;
@@ -251,6 +251,7 @@ body {
   width: 130px;
   height: 100%;
   background: url(/img/profileBG.jpg) 100px/450px repeat;
+  filter: brightness(1.44) sepia(0.25) hue-rotate(3deg) saturate(.75);
 }
 
 .profile-content__title {
@@ -284,6 +285,12 @@ body {
 .lk__subtitle.sub {
   color: #008BD6;
 }
+.lk__subtitle.inn {
+  display: block;
+  color: white;
+  font-size: 16px;
+  margin: 8px 0 0 0;
+}
 .lk__btn {
   width: fit-content;
   border: 1px solid white;
@@ -308,7 +315,62 @@ body {
   flex-direction: column;
   gap: 8px;
 }
+.lk__input-inn {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 8px 0;
+}
+.lk__input.inn {
+  background: none;
+  color: #808080;
+  border: 1px solid #808080;
+  padding: 10px 15px;
+  height: fit-content;
+  width: 210px;
+  font-size: 14px;
+}
+.lk__input.inn::placeholder {
+  color: #808080;
+  font-size: 14px;
+}
+.lk__input.file {
+  opacity: 0;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+.lk__err {
+  margin-top: 10px;
+  display: block;
+  max-width: 390px;
+  font-size: 16px;
+  color: #FF5A5A;
+}
+.lk__input-wrapper {
+  margin-top: 30px;
+  position: relative;
+  width: fit-content;
+}
 
+.lk__input-file-button {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.lk__input-file-icon {
+  object-fit: contain;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.lk__input-file-button-text {
+  color: white;
+}
 
 .password-modal {
   display: none;
@@ -334,7 +396,7 @@ body {
   width: 500px;
   height: fit-content;
   z-index: 6;
-  background-color: #001a33;
+  background-color: #122538;
   border: 2px solid #008BD6;
   padding: 50px 30px 30px 30px;
   border-radius: 30px;
@@ -370,3 +432,23 @@ body {
   border-radius: 30px;
 }
 
+@media screen and (max-height: 730px) {
+  .profile-sidebar__logo {
+    width: 50px;
+  }
+  .profile-sidebar__nav {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .profile-content::after, .profile-content::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .profile {
+    --desktop-width: 90%;
+  }
+}
