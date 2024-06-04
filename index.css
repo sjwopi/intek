@@ -427,6 +427,10 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
+.lk__btn:hover {
+  border: 1px solid #64BC52;
+  color: #64BC52;
+}
 .lk__right {
   color: white;
   flex: 1;
@@ -716,6 +720,10 @@ body {
   color: white;
   border: none;
   cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+.feedback__btn:hover {
+  background-color: #64BC52;
 }
 
 
