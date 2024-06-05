@@ -744,6 +744,7 @@ body {
 }
 .doc__center, .doc__right {
   flex: 1;
+  text-align: center;
 }
 input.doc__center {
   font-size: 18px;
@@ -764,20 +765,17 @@ input.doc__center::placeholder {
   color: white;
   margin: 30px 0 0 auto;
 }
-a.doc__right {
+.doc__right img {
+  width: 20px;
+  height: fit-content;
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
+}
+.doc__right a {
   color: white;
   text-decoration: none;
   position: relative;
-  padding-left: 30px;
-}
-a.doc__right::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0px;
-  width: 20px;
-  height: 20px;
-  background: url(/img/icon-file.png) center/contain no-repeat;
 }
 .doc__btn {
   background-color: #008bd6;
@@ -786,6 +784,48 @@ a.doc__right::before {
   padding: 20px 80px;
   color: white;
   margin-top: 30px;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+.doc__btn:hover {
+  background-color: #64BC52;
+}
+.order__block {
+  position: relative;
+}
+.order__block.open {
+  border-bottom: 1px solid #008bd6;
+  padding-bottom: 30px;
+}
+.order__block.open>.doc__block {
+  border: none;
+}
+.order__btn {
+  position: absolute;
+  border: none;
+  top: 37px;
+  right: 23px;
+  width: 25px;
+  height: 10px;
+  background: url(/img/dropdown-icon.svg) center/contain no-repeat;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+.order__btn.open {
+  transform: rotate(180deg);
+}
+.order__container {
+  display: none;
+  flex-direction: column;
+}
+.order__container h3 {
+  font-size: 16px;
+}
+.order__container .doc__block {
+  border-color: #64BC52;
+}
+.order__container.open {
+  display: flex;
 }
 
 @media screen and (max-height: 730px) {
@@ -901,6 +941,12 @@ a.doc__right::before {
   }
   .doc__right, .doc__center, .doc__left {
     font-size: 14px;
+    text-align: start;
+  }
+  .order__container>.doc__block {
+    width: calc(100% - 40px);
+    padding: 20px 0;
+    margin: 0 20px;
   }
 }
 @media screen and (max-width: 720px) {

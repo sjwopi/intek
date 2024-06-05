@@ -14,6 +14,8 @@ window.onload = () => {
   const headerModileHamb = document.getElementById('profile-header-mobile__hambbtn')
   const headerModal = document.getElementById('header-modal')
 
+  const orderOpenBtn = document.querySelectorAll('.order__btn')
+
   profileSidebar.addEventListener('mouseover', () => {
     profileSidebar.classList.add('open')
   })
@@ -50,4 +52,13 @@ window.onload = () => {
     headerModileHamb.classList.toggle('open')
     headerModal.classList.toggle('open')
   })
+
+  orderOpenBtn.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.target.classList.toggle("open");
+      e.target.parentElement.classList.toggle("open");
+      e.target.parentElement.querySelector('.order__container').classList.toggle("open");
+    })
+  })
+
 }
