@@ -100,7 +100,7 @@
           <img src="./img/link-cars.svg" alt="иконка авто">
           <span>Автомобили</span>
         </a>
-        <a href="./drivers.html" class="profile-sidebar__link">
+        <a href="./drivers.html" class="profile-sidebar__link active">
           <img src="./img/link-drivers.svg" alt="иконка водителей">
           <span>Водители</span>
         </a>
@@ -108,7 +108,7 @@
           <img src="./img/link-doc.svg" alt="иконка документов">
           <span>Документы</span>
         </a>
-        <a href="./electroDoc.html" class="profile-sidebar__link active">
+        <a href="./electroDoc.html" class="profile-sidebar__link">
           <img src="./img/link-electro-doc.svg" alt="иконка эдо">
           <span>ЭДО</span>
         </a>
@@ -129,10 +129,225 @@
         <nav class="profile-breadcrumbs">
           <a href="./index.html">Главная</a>
           <p>Водители</p>
-          <h1 class="profile-content__title">Водители</h1>
         </nav>
+        <h1 class="profile-content__title">Водители</h1>
+
+
+        <div class="cars">
+          <div class="cars__top">
+            <div class="search-wrapper cars__search">
+              <input class="search" placeholder="Поиск">
+            </div>
+            <div class="cars__add" id="drivers-add">Добавить водителя</div>
+          </div>
+        </div>
+
+
+        <div class="cars__blocks">
+          <div class="cars__block header drivers__header">
+            <h4>ФИО водителя</h4>
+            <h4>Номер ву</h4>
+            <h4>Доверенность</h4>
+          </div>
+
+          <div class="cars__block-hasOpen">
+            <button class="driver__open-btn"></button>
+
+            <div class="cars__block">
+              <h5>Фамилия Имя Отчество</h5>
+
+              <div class="cars__block-mob">
+                <h4>Номер ву:</h4>
+                <p>А8999562203022654</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Доверенность:</h4>
+                <p>Есть</p>
+              </div>
+            </div>
+
+            <div class="cars__data-visible">
+              <div class="cars__data">
+                <div class="cars__field">
+                  <h6>Паспрорт:</h6>
+                  <p>2222 589632</p>
+                </div>
+                <div class="cars__field">
+                  <h6>Дата выдачи:</h6>
+                  <p>01.01.2024</p>
+                </div>
+                <div class="cars__field place">
+                  <h6>Место выдачи:</h6>
+                  <p>г. Нижний Новгород ул. Нестерова д.9</p>
+                </div>
+              </div>
+              <button class="cars__change drivers-change">Редактировать</button>
+              <button class="cars__delete" id="drivers-delete">Удалить</button>
+            </div>
+
+          </div>
+
+          <div class="cars__block-hasOpen">
+            <button class="driver__open-btn"></button>
+
+            <div class="cars__block">
+              <h5>Фамилия Имя Отчество</h5>
+
+              <div class="cars__block-mob">
+                <h4>Номер ву:</h4>
+                <p>А8999562203022654</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Доверенность:</h4>
+                <p>Есть</p>
+              </div>
+            </div>
+
+            <div class="cars__data-visible">
+              <div class="cars__data">
+                <div class="cars__field">
+                  <h6>Паспрорт:</h6>
+                  <p>2222 589632</p>
+                </div>
+                <div class="cars__field">
+                  <h6>Дата выдачи:</h6>
+                  <p>01.01.2024</p>
+                </div>
+                <div class="cars__field place">
+                  <h6>Место выдачи:</h6>
+                  <p>г. Нижний Новгород ул. Нестерова д.9</p>
+                </div>
+              </div>
+              <button class="cars__change drivers-change">Редактировать</button>
+              <button class="cars__delete" id="drivers-delete">Удалить</button>
+            </div>
+
+          </div>
+
+          <div class="cars__block-hasOpen">
+            <button class="driver__open-btn"></button>
+
+            <div class="cars__block">
+              <h5>Фамилия Имя Отчество</h5>
+
+              <div class="cars__block-mob">
+                <h4>Номер ву:</h4>
+                <p>А8999562203022654</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Доверенность:</h4>
+                <p>Есть</p>
+              </div>
+            </div>
+
+            <div class="cars__data-visible">
+              <div class="cars__data">
+                <div class="cars__field">
+                  <h6>Паспрорт:</h6>
+                  <p>2222 589632</p>
+                </div>
+                <div class="cars__field">
+                  <h6>Дата выдачи:</h6>
+                  <p>01.01.2024</p>
+                </div>
+                <div class="cars__field place">
+                  <h6>Место выдачи:</h6>
+                  <p>г. Нижний Новгород ул. Нестерова д.9</p>
+                </div>
+              </div>
+              <button class="cars__change drivers-change">Редактировать</button>
+              <button class="cars__delete" id="drivers-delete">Удалить</button>
+            </div>
+
+          </div>
+        </div>
+        
+        <p class="cars__total">Всего: 3</p>
+         
+
       </section>
     </main>
+  </div>
+
+
+  <div class="password-modal carsModal" id="drivers-add-modal">
+    <div class="password-modal__overlay" id="drivers-add-overlay"></div>
+    <form class="password-modal__form carsModal__form">
+      <button type="button" class="password-modal__back" id="drivers-add-close">Назад</button>
+      <h4 class="carsModal__title">Добавление водителя</h4>
+
+      <div class="carsModal__field">
+        <label for="fio">ФИО:</label>
+        <input name="fio" placeholder="ФИО">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="driversLicense">Водительское удостоверение:</label>
+        <input name="driversLicense" placeholder="Водительское удостоверение">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="country">Страна:</label>
+        <input name="country" placeholder="Страна">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="passport">Серия и номер паспорта:</label>
+        <input name="passport" placeholder="Серия и номер паспорта">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="datePassport">Дата выдачи паспорта:</label>
+        <input name="datePassport" placeholder="Дата выдачи паспорта">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="placePassport">Место выдачи паспорта:</label>
+        <input name="placePassport" placeholder="Место выдачи паспорта">
+      </div>
+
+      <button class="password-modal__save carsModal__save">Сохранить</button>
+    </form>
+  </div>
+
+  <div class="password-modal carsModal" id="drivers-change-modal">
+    <div class="password-modal__overlay" id="drivers-change-overlay"></div>
+    <form class="password-modal__form carsModal__form">
+      <button type="button" class="password-modal__back" id="drivers-change-close">Назад</button>
+      <h4 class="carsModal__title">Редактирование водителя</h4>
+
+      <div class="carsModal__field">
+        <label for="fio">ФИО:</label>
+        <input name="fio" placeholder="ФИО">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="driversLicense">Водительское удостоверение:</label>
+        <input name="driversLicense" placeholder="Водительское удостоверение">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="country">Страна:</label>
+        <input name="country" placeholder="Страна">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="passport">Серия и номер паспорта:</label>
+        <input name="passport" placeholder="Серия и номер паспорта">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="datePassport">Дата выдачи паспорта:</label>
+        <input name="datePassport" placeholder="Дата выдачи паспорта">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="placePassport">Место выдачи паспорта:</label>
+        <input name="placePassport" placeholder="Место выдачи паспорта">
+      </div>
+
+      <button class="password-modal__save carsModal__save">Сохранить</button>
+    </form>
   </div>
 
   <script src="./index.js"></script>

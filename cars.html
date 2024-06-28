@@ -137,32 +137,191 @@
             <div class="search-wrapper cars__search">
               <input class="search" placeholder="Поиск">
             </div>
-            <div class="cars__add">Добавить автомобиль</div>
+            <div class="cars__add" id="cars-add">Добавить автомобиль</div>
           </div>
 
           <div class="cars__blocks">
             <div class="cars__block header">
-              <h4 class="cars__brand">Марка автомобиля</h4>
+              <h4>Марка автомобиля</h4>
               <h4>Госномер тягоча</h4>
               <h4>Госномер прицепа</h4>
               <h4>Тип налива емкости</h4>
               <h4>Вместимость в литрах</h4>
               <h4>Количество секций</h4>
             </div>
+
             <div class="cars__block">
-              <p>MERSEDES BENZ</p>
-              <p>А 693 АУ 252</p>
-              <p>А 693 АУ 252</p>
-              <p>Универсальный</p>
-              <p>50 000</p>
-              <p>10</p>
+              <h5>MERSEDES BENZ</h5>
+              <div class="cars__block-mob">
+                <h4>Госномер тягоча:</h4>
+                <p>А 693 АУ 252</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Госномер прицепа:</h4>
+                <p>А 693 АУ 252</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Тип налива емкости:</h4>
+                <p>Универсальный</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Вместимость в литрах:</h4>
+                <p>50 000</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Количество секций:</h4>
+                <p>10</p>
+              </div>
             </div>
+
+            <div class="cars__block">
+              <h5>MERSEDES BENZ</h5>
+              <div class="cars__block-mob">
+                <h4>Госномер тягоча:</h4>
+                <p>А 693 АУ 252</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Госномер прицепа:</h4>
+                <p>А 693 АУ 252</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Тип налива емкости:</h4>
+                <p>Универсальный</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Вместимость в литрах:</h4>
+                <p>50 000</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Количество секций:</h4>
+                <p>10</p>
+              </div>
+            </div>
+
+            <div class="cars__block">
+              <h5>MERSEDES BENZ</h5>
+              <div class="cars__block-mob">
+                <h4>Госномер тягоча:</h4>
+                <p>А 693 АУ 252</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Госномер прицепа:</h4>
+                <p>А 693 АУ 252</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Тип налива емкости:</h4>
+                <p>Универсальный</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Вместимость в литрах:</h4>
+                <p>50 000</p>
+              </div>
+              <div class="cars__block-mob">
+                <h4>Количество секций:</h4>
+                <p>10</p>
+              </div>
+            </div>
+
           </div>
 
           <p class="cars__total">Всего: 3</p>
         </div>
       </section>
     </main>
+  </div>
+
+  <div class="password-modal carsModal" id="cars-add-modal">
+    <div class="password-modal__overlay" id="cars-add-overlay"></div>
+    <form class="password-modal__form carsModal__form">
+      <button type="button" class="password-modal__back" id="cars-add-close">Назад</button>
+      <h4 class="carsModal__title">Добавление автомобиля</h4>
+
+      <div class="carsModal__field">
+        <label for="country">Страна:</label>
+        <input name="country" placeholder="Страна">
+      </div>
+      <div class="carsModal__field">
+        <label for="gosnumber">Госномер:</label>
+        <input name="gosnumber" placeholder="Госномер">
+      </div>
+
+      <div class="carsModal__field column">
+        <h4>Тип автомобиля:</h4>
+        <div class="checkbox-list checkbox-list_cars">
+          <label class="checkbox-item">
+            <input type="radio" name="typeCar" value="Газовоз" />
+            <span class="custom-checkbox"></span>
+            Газовоз
+          </label>
+          <label class="checkbox-item">
+            <input type="radio" name="typeCar" value="Грузовой (фасовка)" />
+            <span class="custom-checkbox"></span>
+            Грузовой (фасовка)
+          </label>
+
+          <label class="checkbox-item">
+            <input type="radio" name="typeCar" value="Бензовоз" />
+            <span class="custom-checkbox"></span>
+            Бензовоз
+          </label>
+        </div>
+      </div>
+
+      <div class="carsModal__field">
+        <label for="brandcar">Марка автомобиля:</label>
+        <input name="brandcar" placeholder="Марка автомобиля">
+      </div>
+
+      <div class="carsModal__field column">
+        <h4>Наличие прицепа:</h4>
+        <div class="checkbox-list checkbox-list_cars">
+          <label class="checkbox-item">
+            <input type="radio" name="trailer" value="нет" />
+            <span class="custom-checkbox"></span>
+            Нет
+          </label>
+          <label class="checkbox-item">
+            <input type="radio" name="trailer" value="есть" />
+            <span class="custom-checkbox"></span>
+            Есть
+          </label>
+        </div>
+      </div>
+
+      <div class="carsModal__field">
+        <label for="quantitySections">Количество секций:</label>
+        <input name="quantitySections" type="number" placeholder="Количество секций">
+      </div>
+
+      <div class="carsModal__field">
+        <label for="quantitySections">Объем трубы:</label>
+        <input name="quantitySections" placeholder="Объем трубы">
+      </div>
+
+      <div class="carsModal__field column">
+        <h4>Тип налива топлива:</h4>
+        <div class="checkbox-list checkbox-list_cars">
+          <label class="checkbox-item">
+            <input type="radio" name="fillingЕype" value="Верхний" />
+            <span class="custom-checkbox"></span>
+            Верхний
+          </label>
+          <label class="checkbox-item">
+            <input type="radio" name="fillingЕype" value="Нижний" />
+            <span class="custom-checkbox"></span>
+            Нижний
+          </label>
+
+          <label class="checkbox-item">
+            <input type="radio" name="fillingЕype" value="Универсальный" />
+            <span class="custom-checkbox"></span>
+            Универсальный
+          </label>
+        </div>
+      </div>
+
+      <button class="password-modal__save carsModal__save">Сохранить</button>
+    </form>
   </div>
 
   <script src="./index.js"></script>
