@@ -29,6 +29,10 @@
         <img src="./img/link-home.svg" alt="иконка главное">
         <span>Главная</span>
       </a>
+      <a href="./lk-catalog.html" class="header-modal__link">
+        <img src="./img/link-catalog.svg" alt="иконка каталога">
+        <span>Каталог</span>
+      </a>
       <a href="./basket.html" class="header-modal__link">
         <img src="./img/link-basket.svg" alt="иконка корзины">
         <span>Корзина</span>
@@ -36,6 +40,18 @@
       <a href="./order.html" class="header-modal__link">
         <img src="./img/link-time.svg" alt="иконка заказов">
         <span>Заказы</span>
+      </a>
+      <a href="./basis.html" class="header-modal__link">
+        <img src="./img/link-basis.svg" alt="иконка базисов">
+        <span>Базисы</span>
+      </a>
+      <a href="./cars.html" class="header-modal__link">
+        <img src="./img/link-cars.svg" alt="иконка авто">
+        <span>Автомобили</span>
+      </a>
+      <a href="./drivers.html" class="header-modal__link">
+        <img src="./img/link-drivers.svg" alt="иконка водителей">
+        <span>Водители</span>
       </a>
       <a href="./doc.html" class="header-modal__link active">
         <img src="./img/link-doc.svg" alt="иконка документов">
@@ -48,12 +64,6 @@
       <a href="./feedback.html" class="header-modal__link">
         <img src="./img/link-feedback.svg" alt="иконка фидбека">
         <span>Обратная связь</span>
-      </a>
-      <a href="./login.html" class="header-modal__link">
-        <span>ЛОГИН</span>
-      </a>
-      <a href="./register.html" class="header-modal__link">
-        <span>РЕГИСТРАЦИЯ</span>
       </a>
     </nav>
 
@@ -70,6 +80,10 @@
           <img src="./img/link-home.svg" alt="иконка главное">
           <span>Главная</span>
         </a>
+        <a href="./lk-catalog.html" class="profile-sidebar__link">
+          <img src="./img/link-catalog.svg" alt="иконка каталога">
+          <span>Каталог</span>
+        </a>
         <a href="./basket.html" class="profile-sidebar__link">
           <img src="./img/link-basket.svg" alt="иконка корзины">
           <span>Корзина</span>
@@ -77,6 +91,18 @@
         <a href="./order.html" class="profile-sidebar__link">
           <img src="./img/link-time.svg" alt="иконка заказов">
           <span>Заказы</span>
+        </a>
+        <a href="./basis.html" class="profile-sidebar__link">
+          <img src="./img/link-basis.svg" alt="иконка базисов">
+          <span>Базисы</span>
+        </a>
+        <a href="./cars.html" class="profile-sidebar__link">
+          <img src="./img/link-cars.svg" alt="иконка авто">
+          <span>Автомобили</span>
+        </a>
+        <a href="./drivers.html" class="profile-sidebar__link">
+          <img src="./img/link-drivers.svg" alt="иконка водителей">
+          <span>Водители</span>
         </a>
         <a href="./doc.html" class="profile-sidebar__link active">
           <img src="./img/link-doc.svg" alt="иконка документов">
@@ -89,12 +115,6 @@
         <a href="./feedback.html" class="profile-sidebar__link">
           <img src="./img/link-feedback.svg" alt="иконка фидбека">
           <span>Обратная связь</span>
-        </a>
-        <a href="./login.html" class="profile-sidebar__link">
-          <span>ЛОГИН</span>
-        </a>
-        <a href="./register.html" class="profile-sidebar__link">
-          <span>РЕГИСТРАЦИЯ</span>
         </a>
       </nav>
     </section>
@@ -113,7 +133,7 @@
 
         <h1 class="profile-content__title">Документы</h1>
 
-        <button class="lk__btn">Запросить документ</button>
+        <button class="lk__btn" id="doc-request">Запросить документ</button>
 
         <div class="doc">
           <div class="doc__block main">
@@ -141,6 +161,36 @@
         </div>
       </section>
     </main>
+  </div>
+
+
+  <div class="password-modal" id="doc-request-modal">
+    <div class="password-modal__overlay" id="doc-request-overlay"></div>
+    <form class="password-modal__form">
+      <button type="button" class="password-modal__back" id="doc-request-close">Назад</button>
+      <h4 class="feedback__subtitle">Выберите тип запрашиваемого документа</h4>
+
+      <div class="checkbox-list">
+        <label class="checkbox-item">
+          <input type="checkbox" name="passport" />
+          <span class="custom-checkbox"></span>
+          Паспорт качества
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="invoice" checked />
+          <span class="custom-checkbox"></span>
+          УпД счет фактура
+        </label>
+        
+        <label class="checkbox-item">
+          <input type="checkbox" name="payment" />
+          <span class="custom-checkbox"></span>
+          Счет на оплату
+        </label>
+      </div>
+
+      <button class="password-modal__save">Запросить документ</button>
+    </form>
   </div>
 
   <script src="./index.js"></script>

@@ -45,7 +45,7 @@
         <img src="./img/link-basis.svg" alt="иконка базисов">
         <span>Базисы</span>
       </a>
-      <a href="./cars.html" class="header-modal__link">
+      <a href="./cars.html" class="header-modal__link active">
         <img src="./img/link-cars.svg" alt="иконка авто">
         <span>Автомобили</span>
       </a>
@@ -57,7 +57,7 @@
         <img src="./img/link-doc.svg" alt="иконка документов">
         <span>Документы</span>
       </a>
-      <a href="./electroDoc.html" class="header-modal__link active">
+      <a href="./electroDoc.html" class="header-modal__link">
         <img src="./img/link-electro-doc.svg" alt="иконка эдо">
         <span>ЭДО</span>
       </a>
@@ -96,7 +96,7 @@
           <img src="./img/link-basis.svg" alt="иконка базисов">
           <span>Базисы</span>
         </a>
-        <a href="./cars.html" class="profile-sidebar__link">
+        <a href="./cars.html" class="profile-sidebar__link active">
           <img src="./img/link-cars.svg" alt="иконка авто">
           <span>Автомобили</span>
         </a>
@@ -108,7 +108,7 @@
           <img src="./img/link-doc.svg" alt="иконка документов">
           <span>Документы</span>
         </a>
-        <a href="./electroDoc.html" class="profile-sidebar__link active">
+        <a href="./electroDoc.html" class="profile-sidebar__link">
           <img src="./img/link-electro-doc.svg" alt="иконка эдо">
           <span>ЭДО</span>
         </a>
@@ -128,52 +128,38 @@
       <section class="profile-content">
         <nav class="profile-breadcrumbs">
           <a href="./index.html">Главная</a>
-          <p>ЭДО</p>
+          <p>Автомобили</p>
         </nav>
+        <h1 class="profile-content__title">Автомобили</h1>
 
-        <div class="edo">
-          <h1 class="edo__title">Электронный документооборот</h1>
+        <div class="cars">
+          <div class="cars__top">
+            <div class="search-wrapper cars__search">
+              <input class="search" placeholder="Поиск">
+            </div>
+            <div class="cars__add">Добавить автомобиль</div>
+          </div>
 
-          <p class="edo__text">Сервис электронного документооборота (ЭДО) позволит быстро обмениваться документами
-            (УПД и Соглашение на ЭДО) с ООО «Газпромнефть-Региональные продажи» через личный
-            кабинет «ОПТИ 24». Онлайн, без бумаг и печатей.</p>
-
-          <h2 class="edo__subtitle">Как это работает?</h2>
-
-          <ul class="edo__list">
-            <li>«Газпромнефть-Региональные продажи» формируют, подписывают и отправляют документ.</li>
-            <li>Оператор ЭДО передает документ.</li>
-            <li>Вы получаете, проверяете и подписываете документ электронной подписью.</li>
-          </ul>
-
-          <div class="edo__container">
-            <h2 class="edo__subtitle">Как подключить ЭДО?</h2>
-
-            <div class="edo__content">
-              <div class="edo__block">
-                <h4>У меня нет провайдера ЭДО </h4>
-                <p>Чтобы получать документы от «Газпромнефть-Региональных продаж» через вашего провайдера
-                  ЭДО, необходимо заключить соглашение об исользовании электронного документооборота.</p>
-                <p>Для этого:</p>
-                <p>1. Кликните на кнопку Заключить соглашение и заполните заявку;</p>
-                <p>2. После настройки связи в Личный кабинет Вашего провайдера поступит соглашение на ЭДО
-                  для подписания.</p>
-                <p>В случае возникновения вопросов или проблем обратитесь к вашему менеджеру «Газпромнефть-Региональных
-                  продаж» или по телефону 8-800-770-00-44.</p>
-              </div>
-              <div class="edo__block">
-                <h4>У меня есть провайдер ЭДО</h4>
-                <p>Чтобы получать документы от «Газпромнефть-Региональных продаж» через вашего провайдера
-                  ЭДО, необходимо заключить соглашение об исользовании электронного документооборота.</p>
-                <p>Для этого:</p>
-                <p>1. Кликните на кнопку Заключить соглашение и заполните заявку;</p>
-                <p>2. После настройки связи в Личный кабинет Вашего провайдера поступит соглашение на ЭДО
-                  для подписания.</p>
-                <p>В случае возникновения вопросов или проблем обратитесь к вашему менеджеру «Газпромнефть-Региональных
-                  продаж» или по телефону 8-800-770-00-44.</p>
-              </div>
+          <div class="cars__blocks">
+            <div class="cars__block header">
+              <h4 class="cars__brand">Марка автомобиля</h4>
+              <h4>Госномер тягоча</h4>
+              <h4>Госномер прицепа</h4>
+              <h4>Тип налива емкости</h4>
+              <h4>Вместимость в литрах</h4>
+              <h4>Количество секций</h4>
+            </div>
+            <div class="cars__block">
+              <p>MERSEDES BENZ</p>
+              <p>А 693 АУ 252</p>
+              <p>А 693 АУ 252</p>
+              <p>Универсальный</p>
+              <p>50 000</p>
+              <p>10</p>
             </div>
           </div>
+
+          <p class="cars__total">Всего: 3</p>
         </div>
       </section>
     </main>

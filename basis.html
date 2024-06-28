@@ -41,7 +41,7 @@
         <img src="./img/link-time.svg" alt="иконка заказов">
         <span>Заказы</span>
       </a>
-      <a href="./basis.html" class="header-modal__link">
+      <a href="./basis.html" class="header-modal__link active">
         <img src="./img/link-basis.svg" alt="иконка базисов">
         <span>Базисы</span>
       </a>
@@ -57,7 +57,7 @@
         <img src="./img/link-doc.svg" alt="иконка документов">
         <span>Документы</span>
       </a>
-      <a href="./electroDoc.html" class="header-modal__link active">
+      <a href="./electroDoc.html" class="header-modal__link">
         <img src="./img/link-electro-doc.svg" alt="иконка эдо">
         <span>ЭДО</span>
       </a>
@@ -92,7 +92,7 @@
           <img src="./img/link-time.svg" alt="иконка заказов">
           <span>Заказы</span>
         </a>
-        <a href="./basis.html" class="profile-sidebar__link">
+        <a href="./basis.html" class="profile-sidebar__link active">
           <img src="./img/link-basis.svg" alt="иконка базисов">
           <span>Базисы</span>
         </a>
@@ -108,7 +108,7 @@
           <img src="./img/link-doc.svg" alt="иконка документов">
           <span>Документы</span>
         </a>
-        <a href="./electroDoc.html" class="profile-sidebar__link active">
+        <a href="./electroDoc.html" class="profile-sidebar__link">
           <img src="./img/link-electro-doc.svg" alt="иконка эдо">
           <span>ЭДО</span>
         </a>
@@ -128,51 +128,32 @@
       <section class="profile-content">
         <nav class="profile-breadcrumbs">
           <a href="./index.html">Главная</a>
-          <p>ЭДО</p>
+          <p>Базисы</p>
         </nav>
+        <h1 class="profile-content__title">Базисы</h1>
 
-        <div class="edo">
-          <h1 class="edo__title">Электронный документооборот</h1>
-
-          <p class="edo__text">Сервис электронного документооборота (ЭДО) позволит быстро обмениваться документами
-            (УПД и Соглашение на ЭДО) с ООО «Газпромнефть-Региональные продажи» через личный
-            кабинет «ОПТИ 24». Онлайн, без бумаг и печатей.</p>
-
-          <h2 class="edo__subtitle">Как это работает?</h2>
-
-          <ul class="edo__list">
-            <li>«Газпромнефть-Региональные продажи» формируют, подписывают и отправляют документ.</li>
-            <li>Оператор ЭДО передает документ.</li>
-            <li>Вы получаете, проверяете и подписываете документ электронной подписью.</li>
-          </ul>
-
-          <div class="edo__container">
-            <h2 class="edo__subtitle">Как подключить ЭДО?</h2>
-
-            <div class="edo__content">
-              <div class="edo__block">
-                <h4>У меня нет провайдера ЭДО </h4>
-                <p>Чтобы получать документы от «Газпромнефть-Региональных продаж» через вашего провайдера
-                  ЭДО, необходимо заключить соглашение об исользовании электронного документооборота.</p>
-                <p>Для этого:</p>
-                <p>1. Кликните на кнопку Заключить соглашение и заполните заявку;</p>
-                <p>2. После настройки связи в Личный кабинет Вашего провайдера поступит соглашение на ЭДО
-                  для подписания.</p>
-                <p>В случае возникновения вопросов или проблем обратитесь к вашему менеджеру «Газпромнефть-Региональных
-                  продаж» или по телефону 8-800-770-00-44.</p>
-              </div>
-              <div class="edo__block">
-                <h4>У меня есть провайдер ЭДО</h4>
-                <p>Чтобы получать документы от «Газпромнефть-Региональных продаж» через вашего провайдера
-                  ЭДО, необходимо заключить соглашение об исользовании электронного документооборота.</p>
-                <p>Для этого:</p>
-                <p>1. Кликните на кнопку Заключить соглашение и заполните заявку;</p>
-                <p>2. После настройки связи в Личный кабинет Вашего провайдера поступит соглашение на ЭДО
-                  для подписания.</p>
-                <p>В случае возникновения вопросов или проблем обратитесь к вашему менеджеру «Газпромнефть-Региональных
-                  продаж» или по телефону 8-800-770-00-44.</p>
-              </div>
+        <div class="basis">
+          <div class="basis__left">
+            <div class="search-wrapper basis__search">
+              <input class="search" placeholder="Поиск">
             </div>
+
+            <ul>
+              <li class="basis__item">г. Нижний Новгород ул. Нестерова д.9</li>
+              <li class="basis__item">г. Нижний Новгород ул. Нестерова д.9</li>
+              <li class="basis__item">г. Нижний Новгород ул. Нестерова д.9</li>
+            </ul>
+
+            <p class="basis__total">Всего: 3</p>
+          </div>
+
+          <div class="basis__map" style="position:relative;overflow:hidden;">
+            <a href="https://yandex.ru/maps/org/nesterova_9/15482857566/?utm_medium=mapframe&utm_source=maps"
+              style="color:#eee;font-size:12px;position:absolute;top:0px;">Нестерова-9</a><a
+              href="https://yandex.ru/maps/47/nizhny-novgorod/category/business_center/184107509/?utm_medium=mapframe&utm_source=maps"
+              style="color:#eee;font-size:12px;position:absolute;top:14px;">Бизнес-центр в Нижнем Новгороде</a><iframe
+              src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=44.015607%2C56.325221&mode=poi&poi%5Bpoint%5D=44.015611%2C56.325661&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D15482857566&z=16.89"
+              width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
           </div>
         </div>
       </section>

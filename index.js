@@ -14,7 +14,13 @@ window.onload = () => {
   const headerModileHamb = document.getElementById('profile-header-mobile__hambbtn')
   const headerModal = document.getElementById('header-modal')
 
+  const docRequest = document.getElementById('doc-request')
+  const docRequestModal = document.getElementById('doc-request-modal')
+  const docRequestOverlay = document.getElementById('doc-request-overlay')
+  const docRequestClose = document.getElementById('doc-request-close')
+
   const orderOpenBtn = document.querySelectorAll('.order__btn')
+
 
   profileSidebar.addEventListener('mouseover', () => {
     profileSidebar.classList.add('open')
@@ -47,7 +53,6 @@ window.onload = () => {
     })
   }
 
-
   headerModileHamb.addEventListener('click', () => {
     headerModileHamb.classList.toggle('open')
     headerModal.classList.toggle('open')
@@ -60,5 +65,15 @@ window.onload = () => {
       e.target.parentElement.querySelector('.order__container').classList.toggle("open");
     })
   })
-
+  if (docRequest && docRequestModal && docRequestOverlay && docRequestClose) {
+    docRequest.addEventListener('click', () => {
+      docRequestModal.classList.add('open')
+    })
+    docRequestOverlay.addEventListener('click', () => {
+      docRequestModal.classList.remove('open')
+    })
+    docRequestClose.addEventListener('click', () => {
+      docRequestModal.classList.remove('open')
+    })
+  }
 }
