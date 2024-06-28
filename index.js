@@ -35,9 +35,9 @@ window.onload = () => {
 
   // Смена пароля
   const changePasswordBtn = document.getElementById('changePassword')
-  const passwordModal = document.getElementById('password-modal')
-  const passwordModalOverlay = document.getElementById('password-modal__overlay')
-  const passwordModalClose = document.getElementById('password-modal__close')
+  const passwordModal = document.getElementById('modal')
+  const passwordModalOverlay = document.getElementById('modal__overlay')
+  const passwordModalClose = document.getElementById('modal__close')
   modalSupportFunction(changePasswordBtn, passwordModal, passwordModalOverlay, passwordModalClose);
 
   // Отправка фидбека
@@ -75,6 +75,15 @@ window.onload = () => {
   const driversEditClose = document.getElementById('drivers-change-close')
   driversEdit.forEach(item => {
     modalSupportFunction(item, driversEditModal, driversEditOverlay, driversEditClose);
+  })
+
+  // Выбор базиса, когда кидают в корзину
+  const catalogItemToBasket = document.querySelectorAll('.catalogItem__basket')
+  const catalogItemToBasketModal = document.getElementById('catalog-item-modal')
+  const catalogItemToBasketOverlay = document.getElementById('catalog-item-overlay')
+  const catalogItemToBasketClose = document.getElementById('catalog-item-close')
+  catalogItemToBasket.forEach(item => {
+    modalSupportFunction(item, catalogItemToBasketModal, catalogItemToBasketOverlay, catalogItemToBasketClose);
   })
 
   // Раскрытие заказа

@@ -587,21 +587,21 @@ button {
 }
 
 
-.password-modal {
+.modal {
   display: none;
 }
 
-.password-modal .feedback__subtitle {
+.modal .feedback__subtitle {
   font-size: 20px;
 }
 
-.password-modal.open {
+.modal.open {
   display: block;
   max-height: 90vh;
   overflow-y: scroll;
 }
 
-.password-modal__overlay {
+.modal__overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -612,11 +612,12 @@ button {
   cursor: pointer;
 }
 
-.password-modal__form {
+.modal__form {
   position: fixed;
   top: 50%;
   left: 50%;
   width: 500px;
+  max-width: 90vw;
   height: 100%;
   height: fit-content;
   z-index: 6;
@@ -628,7 +629,7 @@ button {
   overflow-y: scroll;
 }
 
-.password-modal__close {
+.modal__close {
   cursor: pointer;
   border: none;
   background: none;
@@ -641,13 +642,13 @@ button {
   filter: brightness(0) invert(0.35) sepia(1) saturate(8) hue-rotate(174deg);
 }
 
-.password-modal__form .authpage__field {
+.modal__form .authpage__field {
   width: 100%;
   gap: 0;
   margin-bottom: 30px;
 }
 
-.password-modal__save {
+.modal__save {
   display: block;
   border: 1px solid white;
   background-color: transparent;
@@ -657,12 +658,12 @@ button {
   margin: 0 0 0 auto;
 }
 
-.password-modal__save:hover {
+.modal__save:hover {
   border-color: #64BC52;
   color: #64BC52;
 }
 
-.password-modal__back {
+.modal__back {
   background: none;
   border: none;
   color: white;
@@ -1219,6 +1220,7 @@ input.doc__center::placeholder {
 .cars__block:last-child {
   border-bottom: 1px solid #008bd6;
 }
+
 .cars__block-hasOpen:last-child {
   border-bottom: 1px solid #008bd6;
 }
@@ -1311,18 +1313,21 @@ input.doc__center::placeholder {
   font-size: 16px;
   flex: 2;
 }
+
 .cars__change {
   border: 1px solid white;
   color: white;
   background: none;
   padding: 10px 30px;
 }
+
 .cars__delete {
   border: 1px solid #008bd6;
   color: #008bd6;
   background: none;
   padding: 10px 30px;
 }
+
 .drivers__header {
   margin-top: 30px;
 }
@@ -1392,6 +1397,73 @@ input.doc__center::placeholder {
   margin-top: 60px;
 }
 
+.catalog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  --color-font: white;
+  --color-main: #008bd6;
+}
+
+.catalog.light {
+  --color-font: black;
+  --color-main: black;
+}
+
+.catalog__header {
+  border-bottom: 1px solid var(--color-main);
+  padding: 0 20% 30px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.catalog__header h3 {
+  flex: 1;
+  color: var(--color-font);
+}
+
+.catalog__header {
+  border-bottom: 1px solid var(--color-main);
+}
+
+.catalogItem {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--color-main);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.catalogItem__block {
+  flex: 1;
+  color: var(--color-font);
+}
+
+.catalogItem__block h5 {
+  display: none;
+}
+.catalogItem__block h4, .catalogItem__block p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.catalogItem__block .catalogItem__cat  {
+  font-weight: 600;
+}
+
+.catalogItem__basket {
+  flex: 1;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 0;
+  background: none;
+  color: var(--color-font);
+  border: 2px solid var(--color-font);
+}
+.catalog .basises ul {
+  padding-left: 30px;
+}
+
 @media screen and (max-width: 1600px) {
 
   .profile-content::after,
@@ -1440,6 +1512,9 @@ input.doc__center::placeholder {
     display: block;
     font-size: 16px;
     font-weight: 400;
+  }
+  .catalog .basises {
+    flex: 2;
   }
 }
 
@@ -1688,22 +1763,72 @@ input.doc__center::placeholder {
   .checkbox-item {
     font-size: 14px !important;
   }
+
   .cars__change {
     display: none;
   }
+
   .cars__delete {
     display: none;
   }
+
   .cars__field p {
     flex: 1;
   }
+
   .cars__field.place {
     flex-direction: column;
   }
+
   .driver__open-btn {
     top: 20px;
     right: 10px;
     width: 20px;
     height: 20px;
+  }
+
+  .catalog__header {
+    display: none;
+  }
+
+  .catalogItem {
+    flex-direction: column;
+    position: relative;
+  }
+  .catalogItem__block h5 {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .catalogItem__basket {
+    font-size: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    background: url(/img/close-icon.png) center/contain no-repeat;
+    filter: invert(1);
+    transform: rotate(45deg);
+  }
+  .catalog.light .catalogItem__basket {
+    filter: invert(0)
+  }
+  .catalogItem__block {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 10px 0;
+  }
+  .catalogItem__block.basises {
+    flex-direction: column;
+  }
+  .catalogItem__cat {
+    margin: 0;
+  }
+  .catalogItem h4 {
+    font-size: 18px;
+    font-weight: 600;
   }
 }

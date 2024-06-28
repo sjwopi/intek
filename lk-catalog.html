@@ -130,8 +130,116 @@
           <a href="./index.html">Главная</a>
           <p>Каталог</p>
         </nav>
+        <h1 class="profile-content__title">Каталог</h1>
+
+        <div class="catalog">
+          <div class="catalog__header">
+            <h3>Категория</h3>
+            <h3>Название</h3>
+            <h3>Цена</h3>
+            <h3 class="basises">Базисы</h3>
+          </div>
+
+          <div class="catalogItem">
+            <div class="catalogItem__block catalogItem__cat">
+              <h4>Бензин А-92</h4>
+            </div>
+            <div class="catalogItem__block">
+              <h4>АИ-92 К5</h4>
+            </div>
+            <div class="catalogItem__block">
+              <h5>Цена:</h5>
+              <p>5000 р / т</p>
+            </div>
+            <div class="catalogItem__block basises">
+              <h5>Базисы:</h5>
+              <ul>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+              </ul>
+            </div>
+            <button class="catalogItem__basket">В корзину</button>
+          </div>
+
+          <div class="catalogItem">
+            <div class="catalogItem__block catalogItem__cat">
+              <h4>Бензин А-92</h4>
+            </div>
+            <div class="catalogItem__block">
+              <h4>АИ-92 К5</h4>
+            </div>
+            <div class="catalogItem__block">
+              <h5>Цена:</h5>
+              <p>5000 р / т</p>
+            </div>
+            <div class="catalogItem__block basises">
+              <h5>Базисы:</h5>
+              <ul>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+              </ul>
+            </div>
+            <button class="catalogItem__basket">В корзину</button>
+          </div>
+
+          <div class="catalogItem">
+            <div class="catalogItem__block catalogItem__cat">
+              <h4>Бензин А-92</h4>
+            </div>
+            <div class="catalogItem__block">
+              <h4>АИ-92 К5</h4>
+            </div>
+            <div class="catalogItem__block">
+              <h5>Цена:</h5>
+              <p>5000 р / т</p>
+            </div>
+            <div class="catalogItem__block basises">
+              <h5>Базисы:</h5>
+              <ul>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+                <li>г. Нижний Новгород ул. Нестерова д.9</li>
+              </ul>
+            </div>
+            <button class="catalogItem__basket">В корзину</button>
+          </div>
+        </div>
       </section>
     </main>
+  </div>
+
+  <div class="modal" id="catalog-item-modal">
+    <div class="modal__overlay" id="catalog-item-overlay"></div>
+    <form class="modal__form">
+      <button type="button" class="modal__back" id="catalog-item-close">Назад</button>
+      <h4 class="feedback__subtitle">Для добавления товара<br>в корзину, выберите адрес базиса:</h4>
+
+      <div class="checkbox-list">
+        <label class="checkbox-item">
+          <input type="radio" name="placeBasis" />
+          <span class="custom-checkbox"></span>
+          г. Нижний Новгород ул. Нестерова д.9
+        </label>
+        <label class="checkbox-item">
+          <input type="radio" name="placeBasis" />
+          <span class="custom-checkbox"></span>
+          г. Нижний Новгород ул. Нестерова д.9
+        </label>
+
+        <label class="checkbox-item">
+          <input type="radio" name="placeBasis" />
+          <span class="custom-checkbox"></span>
+          г. Нижний Новгород ул. Нестерова д.9
+        </label>
+      </div>
+
+      <button class="modal__save">Добавить в корзину</button>
+    </form>
   </div>
 
   <script src="./index.js"></script>
