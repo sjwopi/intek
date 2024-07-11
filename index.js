@@ -86,6 +86,21 @@ window.onload = () => {
     modalSupportFunction(item, catalogItemToBasketModal, catalogItemToBasketOverlay, catalogItemToBasketClose);
   })
 
+  // Модалка на ИНН
+  const innCheck = document.getElementById('checkInn')
+  const innCheckModal = document.getElementById('checkInn-modal')
+  const innCheckOverlay = document.getElementById('checkInn-overlay')
+  const innCheckClose = document.getElementById('checkInn-close')
+  modalSupportFunction(innCheck, innCheckModal, innCheckOverlay, innCheckClose);
+
+  // Модалка на ИНН не успешно
+  const innCheckBad = document.getElementById('checkInn-bad')
+  const innCheckBadModal = document.getElementById('checkInn-bad-modal')
+  const innCheckBadOverlay = document.getElementById('checkInn-bad-overlay')
+  const innCheckBadClose = document.getElementById('checkInn-bad-close')
+  modalSupportFunction(innCheckBad, innCheckBadModal, innCheckBadOverlay, innCheckBadClose);
+
+
   // Раскрытие заказа
   const orderOpenBtn = document.querySelectorAll('.order__btn')
   orderOpenBtn.forEach(item => {
@@ -102,5 +117,12 @@ window.onload = () => {
     item.addEventListener('click', (e) => {
       e.target.parentElement.classList.toggle("open");
     })
+  })
+
+  // Dropdown для выхода
+  const logOutOpen = document.getElementById('userDataOpen');
+  const logOutDropdown = document.getElementById('userData');
+  logOutOpen.addEventListener('click', () => {
+    logOutDropdown.classList.toggle('open')
   })
 }

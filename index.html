@@ -22,7 +22,7 @@
 
   <div class="header-modal" id="header-modal">
     <h3 class="header-modal__money">Баланс: 124312341р</h3>
-    <h3 class="header-modal__money fio">Фамилия И. О.</h3>
+    <h3 class="header-modal__money">Фамилия И.О.</h3>
 
     <nav class="header-modal__nav">
       <a href="./index.html" class="header-modal__link active">
@@ -68,6 +68,7 @@
     </nav>
 
     <a href="tel:+7(831)212-38-85" class="header-modal__caption">+7(831)212-38-85</a>
+    <button class="header-modal__logout">Выход</button>
   </div>
 
 
@@ -123,7 +124,10 @@
     <main class="profile-container">
       <header class="profile-header">
         <h3 class="profile-header__money">Баланс: 124312341р</h3>
-        <h3 class="profile-header__money">Фамилия И. О.</h3>
+        <div class="userData" id="userData">
+          <button class="profile-header__money" id="userDataOpen">Фамилия И. О.</button>
+          <button class="userData__logout" id="userData__logout">Выйти</button>
+        </div>
       </header>
 
       <section class="profile-content lk">
@@ -166,7 +170,8 @@
               <input class="lk__input inn" placeholder="Введите ИНН">
             </div>
 
-            <button class="lk__btn" id="changePassword">Проверить ИНН</button>
+            <button class="lk__btn" id="checkInn">Проверить ИНН успешно</button>
+            <button class="lk__btn" id="checkInn-bad">Проверить ИНН плохо</button>
 
             <div class="lk__input-wrapper">
               <input name="lk__input-file" type="file" class="lk__input file">
@@ -208,9 +213,28 @@
 
       <button class="modal__save">Сменить</button>
 
-      <button class="modal__close" id="modal__close"></button>
+      <button type="button" class="modal__close" id="modal__close"></button>
     </form>
   </div>
+
+  <div class="modal changeInn" id="checkInn-modal">
+    <div class="modal__overlay" id="checkInn-overlay"></div>
+    <form class="modal__form">
+       <h4 class="modal__title">Ваш ИНН успешно подтвержден!</h4>
+      <button class="modal__save">В личный кабинет</button>
+      <button type="button" class="modal__close" id="checkInn-close"></button>
+    </form>
+  </div>
+
+  <div class="modal changeInn" id="checkInn-bad-modal">
+    <div class="modal__overlay" id="checkInn-bad-overlay"></div>
+    <form class="modal__form">
+       <h4 class="modal__title">К сожалению, Ваш ИНН не подтвержден подтвержден, попробуйте снова</h4>
+      <button class="modal__save">В личный кабинет</button>
+      <button type="button" class="modal__close" id="checkInn-bad-close"></button>
+    </form>
+  </div>
+
 
   <script src="./index.js"></script>
 </body>
