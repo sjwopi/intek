@@ -973,6 +973,56 @@ input.doc__center::placeholder {
   background-color: #64BC52;
 }
 
+.order__header {
+  position: relative;
+  width: fit-content;
+  display: flex;
+}
+
+.order__header label {
+  padding: 10px 45px;
+  color: white;
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  line-height: 24px;
+  border-bottom: 3px solid white;
+  transition: all .2s ease-in-out;
+}
+
+.order__header label.completed {
+  border-color: transparent;
+  color: #008bd6;
+}
+
+.order__header input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.order__header input:checked~.active {
+  border-color: transparent;
+  color: #008bd6;
+}
+
+.order__header input:checked~.completed {
+  border-bottom: 3px solid white;
+  color: white;
+}
+
+.order__header:has(input[type="checkbox"]:checked)~.completed {
+  display: flex;
+}
+
+.order__header:has(input[type="checkbox"]:checked)~.active {
+  display: none;
+}
+
 .order__block {
   position: relative;
 }
@@ -1217,6 +1267,10 @@ input.doc__center::placeholder {
   gap: 30px;
 }
 
+.cars__top.drivers {
+  max-width: 100%;
+}
+
 .cars__search {
   flex: 2;
 }
@@ -1227,6 +1281,24 @@ input.doc__center::placeholder {
   background-color: #008bd6;
   text-align: center;
   padding: 26px 40px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.cars__add.dark {
+  color: #008bd6;
+  background: #1F3D5B;
+  border: none !important;
+}
+
+.cars__add.dark input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
 }
 
 .cars__blocks {
