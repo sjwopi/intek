@@ -316,6 +316,9 @@ button {
   font-weight: 700;
   text-decoration: none;
 }
+.header-modal__caption:hover {
+  color: #008bd6;
+}
 
 .profile-sidebar {
   background-color: #141414;
