@@ -2,6 +2,7 @@
 body {
   font-family: 'Gotham Pro', sans-serif;
   color: #000000;
+  overflow-x: hidden;
 }
 
 * {
@@ -828,6 +829,9 @@ button {
 
 .feedback__right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .feedback__right h4 {
@@ -1558,6 +1562,7 @@ input.doc__center::placeholder {
 }
 
 .catalog .basises ul {
+  list-style: disc;
   padding-left: 30px;
 }
 
@@ -1606,11 +1611,57 @@ input.doc__center::placeholder {
   display: block;
 }
 
-@media screen and (max-width: 1600px) {
+.empty {
+  padding: 0 30px;
+}
 
+.basket__btns {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 30px;
+}
+.basket__btns .doc__btn {
+  margin: 0;
+}
+
+
+@media screen and (max-width: 1600px) {
   .profile-content::after,
   .profile-content::before {
     display: none;
+  }
+
+  .authpage {
+    padding: 60px calc((100% - 800px) / 2);
+  }
+
+  .authpage__title {
+    margin-bottom: 50px;
+  }
+
+  .authpage__field {
+    width: 65%;
+    gap: 20px
+  }
+
+  .authpage__input {
+    padding: 12px 0;
+  }
+
+  .authpage__btns {
+    width: 30%;
+  }
+
+  .authpage__btn {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+
+  .wrongpassword {
+    font-size: 16px;
   }
 }
 
@@ -1666,6 +1717,14 @@ input.doc__center::placeholder {
 }
 
 @media screen and (max-width: 900px) {
+  .authpage {
+    padding: 40px 5%;
+  }
+
+  .authpage__container {
+    padding: 40px;
+  }
+
   .profile {
     --desktop-width: calc(100% - 40px);
     --header-height: 66px;
@@ -1839,6 +1898,34 @@ input.doc__center::placeholder {
 }
 
 @media screen and (max-width: 720px) {
+  .authpage__container {
+    padding: 0;
+    border: none;
+  }
+
+  .authpage__form {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .authpage__field {
+    width: 100%;
+  }
+
+  .authpage__btns {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .authpage__soglasie {
+    gap: 10px;
+  }
+
+  .authpage__soglasie a {
+    font-size: 13px;
+  }
+
   .edo {
     gap: 30px;
   }
@@ -2002,5 +2089,16 @@ input.doc__center::placeholder {
     padding: 8px 25px;
     font-size: 16px;
     line-height: 18px;
+  }
+
+  .basket__btns {
+    max-width: 300px;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin: 20px auto 0 auto;
+  }
+  .basket__btns .doc__btn {
+    width: 100%;
+    padding: 16px 0;
   }
 }
