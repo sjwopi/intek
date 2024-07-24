@@ -920,6 +920,7 @@ button {
 .doc__right {
   flex: 1;
   text-align: center;
+  white-space: nowrap;
 }
 
 input.doc__center {
@@ -963,6 +964,11 @@ input.doc__center::placeholder {
   color: white;
   text-decoration: none;
   position: relative;
+  display: inline-block;
+  max-width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .doc__btn {
@@ -1079,6 +1085,9 @@ input.doc__center::placeholder {
 }
 
 .modal {
+  display: none;
+}
+.modal::-webkit-scrollbar {
   display: none;
 }
 
